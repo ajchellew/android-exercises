@@ -18,9 +18,9 @@ Download [Android Studio](https://developer.android.com/studio/index.html)
 
 The Main UI of Android studio opens.
 
-Key buttons
+Key items:
 
-[logo]: https://github.com/ajchellew/android-exercises/raw/master/resources/images/AS-Overview-NewProject.png "AS Interface"
+![AS Interface](../resources/images/AS-Overview-NewProject.png)
 
 1. Run button
 2. Project view
@@ -93,9 +93,38 @@ This should now build and install
 
 ## Understanding the app
 
-##### App/Manifests
-
+##### app/manifests
 The `AndroidManifest.xml` describes the app, its permissions, linking its name, icons, themes and activities.
 
 > Activities created in the app must be defined here, otherwise the app will crash when they are created.
 
+##### app/java
+The java code, note there are 3 folders, for the actual app code, pure java unit test code and android unit test code.
+
+> The app only has one file `MapsActivity.java`
+
+##### app/res
+
+* drawables: image files, png or other types such as svg.
+* layouts: XML describing the screen layout, can be for an activity for a sub view. 
+* mipmap: more images, i.e. the apps icon is here, note the icon is actually many files for each different resolution required.
+* values: colors, strings, styles defined in XML, for customisation and localisation.
+
+##### Gradle Scripts
+
+`build.gradle (Module: app)` is the only file of interest for a small test project.
+
+### Activity/Layout Link
+
+In `MapsActivity.java` the layout is linked via `setContentView(R.layout.activity_maps);` in `onCreate`
+
+## Extending App
+
+* Add "My location" see https://developers.google.com/maps/documentation/android-api/location
+
+>* Add permissions to manifest (actually its already added but key to understand this)
+```
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+<uses-permission android:name="android.permission.ACCESS_COURSE_LOCATION"/>
+```
+>* Request runtime permission for Android M
