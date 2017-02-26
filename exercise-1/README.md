@@ -1,5 +1,11 @@
 # Exercise 1 
 
+Concepts
+- New app
+- Java / Manifest files
+- Permissions (new for Android 6.0 "M")
+- Android Studio / Gradle errors
+
 ## Install and Introduction with Google Maps app
 
 ### Install
