@@ -80,3 +80,18 @@ It can be a pain, clean and rebuild if the resources fail.
 
 ### Debugging
 See LogCat under Android Monitor in Android Studio
+
+
+# Useful Resources
+
+Android Asset Studio - Icon Generator 
+https://romannurik.github.io/AndroidAssetStudio/
+
+Icons 
+https://materialdesignicons.com/
+
+Libraries
+https://android-arsenal.com/
+
+CommonsGuy Blog
+https://commonsware.com/blog/
