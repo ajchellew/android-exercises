@@ -72,5 +72,11 @@ For example this will call a AutoStart class that inherits from BroadcastReceive
 </receiver>
 ```
 
+### R file
+The R file is a class automatically generated to allow Resource files to be referenced in code.
+For example a layout file `activity_main.xml` is given an ID which can then be referenced by `R.layout.activity_main`
+
+It can be a pain, clean and rebuild if the resources fail.
+
 ### Debugging
 See LogCat under Android Monitor in Android Studio
