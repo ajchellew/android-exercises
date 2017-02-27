@@ -54,7 +54,7 @@ Switch back to `MainActivity.java`
 
 In the `OnCreate` method add code to use the button in the layout, this must be after `setContentView` otherwise the layout and button has not been created yet.
 
-**Do Not Copy-Paste this**
+> **Do Not Copy-Paste this**
 ```
 Button buttonSwitchActivity = (Button) findViewById(R.id.buttonSwitchActivity);
 buttonSwitchActivity.setOnClickListener(new View.OnClickListener() {
@@ -64,7 +64,7 @@ buttonSwitchActivity.setOnClickListener(new View.OnClickListener() {
     }
 });
 ``` 
-**Do Not Copy-Paste this**
+> **Do Not Copy-Paste this**
 
 Instead try to use Android Studio's completion and alt-enter symbol resolving.
 
@@ -106,7 +106,7 @@ To do this we will add Toasts. In Android Toasts appear over the top of the acti
 
 In `MainActivity.java` override `OnPause` to add a toast to show when the Activity is paused
 
-**Do Not Copy-Paste this**
+> **Do Not Copy-Paste this**
 ```
 @Override
 protected void onPause() {
@@ -114,7 +114,7 @@ protected void onPause() {
     Toast.makeText(this, "MainActivity Paused", Toast.LENGTH_SHORT).show();
 }
 ``` 
-**Do Not Copy-Paste this**
+> **Do Not Copy-Paste this**
 
 Instead try to use Android Studio's code generation. Add some blank lines under the `OnCreate` method and press Alt+Insert
 
@@ -153,9 +153,9 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-Do the same in `SecondaryActivity.java`.
+* Do the same in `SecondaryActivity.java`.
 
-Run: notice pressing the button always pauses the current Activity and creates a new Activity each time due to the `startActivity` call, however if you then use the Android back button the existing activity is returned to and no new Activity is created.
+* Run: notice pressing the button always pauses the current Activity and creates a new Activity each time due to the `startActivity` call, however if you then use the Android back button the existing activity is returned to and no new Activity is created.
 
 Instead of using `startActivity( ... )` to switch back to `MainActivity` try using `finish()` instead. This is the same as pressing back, this will then recall `MainActivity` from the stack and resume it, as opposite to creating a new instance.
 
