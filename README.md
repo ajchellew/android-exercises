@@ -4,6 +4,7 @@ Attempting to teach the fundamentals of Android (circa Nougat, Android Studio 2.
 This page contains an overview of various concepts of Android exercises are found in subdirectories.
 
 [Exercise 1](/exercise-1/): Installing Android Studio and creating a first app
+[Exercise 2](/exercise-2/): Creating Activities, Adding Widgets and Android Studio shortcuts
 
 ## Android Development Principles
 This is a supplement to the larger [Application Fundamentals](https://developer.android.com/guide/components/fundamentals.html) guide provided by Google, also undoubtfully more subjective.
