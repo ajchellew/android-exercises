@@ -1,6 +1,10 @@
 # android-exercises
 Attempting to teach the fundamentals of Android (circa Nougat, Android Studio 2.2.3)
 
+This page contains an overview of various concepts of Android exercises are found in subdirectories.
+
+[Exercise 1](/exercise-1/): Installing Android Studio and creating a first app
+
 ## Android Development Principles
 This is a supplement to the larger [Application Fundamentals](https://developer.android.com/guide/components/fundamentals.html) guide provided by Google, also undoubtfully more subjective.
 
@@ -72,5 +76,26 @@ For example this will call a AutoStart class that inherits from BroadcastReceive
 </receiver>
 ```
 
+### R file
+The R file is a class automatically generated to allow Resource files to be referenced in code.
+For example a layout file `activity_main.xml` is given an ID which can then be referenced by `R.layout.activity_main`
+
+It can be a pain, clean and rebuild if the resources fail.
+
 ### Debugging
 See LogCat under Android Monitor in Android Studio
+
+
+# Useful Resources
+
+Android Asset Studio - Icon Generator 
+https://romannurik.github.io/AndroidAssetStudio/
+
+Icons 
+https://materialdesignicons.com/
+
+Libraries
+https://android-arsenal.com/
+
+CommonsGuy Blog
+https://commonsware.com/blog/
