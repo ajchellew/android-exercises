@@ -60,7 +60,7 @@ Advise this is turned off:
 
 Uncheck enable.
 
-##### _DexIndexOverflowException_
+##### If it doesn't compile with _DexIndexOverflowException_
 
 Does it work? Likely not if _DexIndexOverflowException_ occurs this is because adding Maps as added the huge Google Maps library and Android has an limit of 65536 Methods in the DEX files.
 
@@ -70,7 +70,7 @@ Open, Under Project > Gradle Scripts > build.gradle (module: app)
 
 add `multiDexEnabled true`  to the `defaultConfig` block inside the `android` block
 
-
+for example:
 ```
 android {
     compileSdkVersion 25
@@ -114,7 +114,7 @@ The java code, note there are 3 folders, for the actual app code, pure java unit
 * drawables: image files, png or other types such as svg.
 * layouts: XML describing the screen layout, can be for an activity for a sub view. 
 * mipmap: more images, i.e. the apps icon is here, note the icon is actually many files for each different resolution required.
-* values: colors, strings, styles defined in XML, for customisation and localisation.
+* values: colors, strings, styles defined in XML, for customisation and localisation. The app name can be changed here.
 
 ##### Gradle Scripts
 
@@ -133,4 +133,44 @@ In `MapsActivity.java` the layout is linked via `setContentView(R.layout.activit
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 <uses-permission android:name="android.permission.ACCESS_COURSE_LOCATION"/>
 ```
->* Request runtime permission for Android M
+* Don't forget to request runtime permission for >= Android M
+
+#### Changes
+
+Add something like this in the Activity's `onMapReady()` method
+
+```
+if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED) {
+    mMap.setMyLocationEnabled(true);
+} else {
+    // request permission.
+    ActivityCompat.requestPermissions(thisActivity,
+                new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
+}
+```
+and
+```
+@Override
+public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+    if (requestCode == MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION) {
+      if (permissions.length == 1 &&
+          permissions[0] == Manifest.permission.ACCESS_FINE_LOCATION &&
+          grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+        mMap.setMyLocationEnabled(true);
+    } else {
+      // Permission was denied. Display an error message.
+    }
+}
+```
+
+Where `MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION` is a const int
+
+Android Studio will highlight in red things it cannot currently resolve, clicking it and pressing alt+enter or clicking the red lightbulb provides help for most things.
+
+![AS ALT+ENTER](../resources/images/AS-Alt+Enter.png)
+
+`Manifest.permission.ACCESS_FINE_LOCATION` doesn't get fixed automatically because your app will contain a generated Manifest class. removing the prefix so only `ACCESS_FINE_LOCATION` is present will allow Android Studio to resolve it correctly.
+
+![AS ALT+ENTER](../resources/images/AS-Alt+Enter-Permission.png)
