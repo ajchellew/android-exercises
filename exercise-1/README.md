@@ -46,15 +46,11 @@ For more instructions see [Google Map API documentation](https://developers.goog
 1. Get API key
 2. Update the YOUR_KEY_HERE variable in `google_maps_api.xml` with the API key from Google, this key will start with 'AIza'
 
-### Run
-
 Press the 'Run' button 
 
 ##### Instant Run
 
-Instant run sounds like a great idea but in personal experience it causes confusion when it fails to update correctly or resource files change.
-
-Advise this is turned off:
+Instant run sounds like a great idea but in personal experience it causes confusion when it occasionally fails to update correctly often due to resource file changes. Therefore advise this is turned off:
 
 `File > Settings > Build, Execution, Deployment > Instant Run`
 
@@ -92,8 +88,7 @@ android {
     }
 }
 ```
-
-### Run again
+Run again
 
 This should now build and install
 
