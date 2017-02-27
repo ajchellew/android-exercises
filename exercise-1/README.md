@@ -114,7 +114,7 @@ The java code, note there are 3 folders, for the actual app code, pure java unit
 * drawables: image files, png or other types such as svg.
 * layouts: XML describing the screen layout, can be for an activity for a sub view. 
 * mipmap: more images, i.e. the apps icon is here, note the icon is actually many files for each different resolution required.
-* values: colors, strings, styles defined in XML, for customisation and localisation.
+* values: colors, strings, styles defined in XML, for customisation and localisation. The app name can be changed here.
 
 ##### Gradle Scripts
 
