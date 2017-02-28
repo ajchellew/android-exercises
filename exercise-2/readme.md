@@ -97,8 +97,8 @@ Activity Lifecycle States
 
 * `OnCreate` occurs when creating the activity for the first time
 * `OnStart` occurs when starting the activity for the first time - Mostly ignored
-* `OnResume` occurs when the activity is being left, this could be from switching activities in the app, or from the user switching to this app
-* `OnPause` occurs when the activity is returned to, this could be by switching activities in the app, or from the user switching apps
+* `OnResume` occurs when the activity is first started or returned to, this could be by switching activities in the app, or from the user switching apps 
+* `OnPause` occurs when the activity is being left, this could be from switching activities in the app, or from the user switching to this app
 * `OnStop` occurs when stopping the activity - Mostly ignored
 * `OnDestroy` occurs when the activity is removed from memory
 
