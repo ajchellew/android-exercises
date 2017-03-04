@@ -7,6 +7,8 @@ This page contains an overview of various concepts of Android exercises are foun
 
 [Exercise 2](/exercise-2/): Creating Activities, Adding Widgets and Android Studio shortcuts
 
+[Exercise 3](/exercise-3/): Using 3rd Party Libraries
+
 ## Android Development Principles
 This is a supplement to the larger [Application Fundamentals](https://developer.android.com/guide/components/fundamentals.html) guide provided by Google, also undoubtfully more subjective.
 
