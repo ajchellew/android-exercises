@@ -12,20 +12,20 @@ Taking the app from the exercise 2 this exercise shows how to use 3rd party libr
 
 Press the Project Structure button
 
-![Project Structure](/resources/images/as-project-structure.png)
+![Project Structure](resources/images/as-project-structure.png)
 
 1. Select the module 'app'
 2. Select the 'Dependencies' tab
 3. Press the add button and select 'Library dependency'
 
-![App module Dependency](/resources/images/as-module-dependencies.png)
+![App module Dependency](resources/images/as-module-dependencies.png)
 
 Add the 'joda-time' library to the app 
 
 1. Type 'joda' in the box and pressing search.
 2. Select the 'joda-time:joda-time' entry and press OK.
 
-![Add Joda](/resources/images/as-add-joda.png)
+![Add Joda](resources/images/as-add-joda.png)
 
 Press OK on the Project Structure window. Gradle will resync to include the new library.
 
@@ -68,7 +68,7 @@ allprojects {
 
 Then the dependency can be added to `build.gradle (Module: app)`. Be sure to press the sync button to force gradle to download the library
 
-![Add Tangram-ES](/resources/images/as-gradle-sync.png)
+![Add Tangram-ES](resources/images/as-gradle-sync.png)
 
 #### Custom Maven Repository
 
